@@ -30,7 +30,7 @@ private:
 	sKulka *pWybranaKulka = nullptr;
 
 	// Adding a ball
-	void DodajKulke(float x, float y, float r = 5.0f)
+	void DodajKulke(float x, float y, float r = 8.0f)
 	{
 		sKulka b;
 		b.px = x; b.py = y;
@@ -53,10 +53,10 @@ public:
 		for (int i = 0; i < nPoints; i++)
 			kulkaModel.push_back({ cosf(i / (float)(nPoints - 1) * 2.0f * 3.14159f) , sinf(i / (float)(nPoints - 1) * 2.0f * 3.14159f) });
 
-		float fDefaultRad = 8.0f;
+		float fDefaultRad = 10.0f;
 	
 		// tworzenie kulek
-		for (int i = 0; i < 10; i++)
+		for (int i = 0; i < 6; i++)
 			DodajKulke(rand() % ScreenWidth(), rand() % ScreenHeight(), rand() % 16 + 2);
 
 		return true;
@@ -215,10 +215,11 @@ public:
 int main()
 {
 	 SilnikFizyczny game;
-	game.ConstructConsole(160, 120, 8, 8);
+	game.ConstructConsole(100, 80, 8, 8);
 	game.Start();
 	
 	cin.get();
 
 	return 0;
 };
+
