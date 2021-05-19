@@ -1,2 +1,2 @@
-Physic engine
-Simple physic engine created as Uni project
+#Physic engine
+Simple physic engine created for Uni project
